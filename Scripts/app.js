@@ -38,13 +38,30 @@
     }
     
     /**
+     * This function injects some text into the first paragraph of a page based on it's 
+     * document.title property
+     * 
+     * @function InitialText
+     * @returns {void}
+     */
+    function InitialText() {
+        var paragraph = document.getElementsByTagName("p")[0];
+        
+        paragraph.textContent = "This is my first paragraph on the " + document.title + " page";
+    }
+    
+    /**
      * This function provides JavaScript code for the Home page
      * 
      * @function Home
      * @returns {void}
      */
     function Home() {
-        console.log("You are at the Home Page");
+        InitialText();
+        
+        var firstPargraph = document.querySelectorAll("div.row p")[0];
+        
+       firstPargraph.style.color = "red";
     }
     
      /**
@@ -54,7 +71,7 @@
      * @returns {void}
      */
     function About() {
-        console.log("You are at the About Page");
+        InitialText();
     }
     
      /**
@@ -64,7 +81,7 @@
      * @returns {void}
      */
     function Contact() {
-        console.log("You are at the Contact Page");
+        
     }
     
      /**
@@ -74,7 +91,7 @@
      * @returns {void}
      */
     function Projects() {
-        console.log("You are at the Projects Page");
+        InitialText();
     }
 
     
