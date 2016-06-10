@@ -49,7 +49,7 @@
         
         paragraph.textContent = "This is my first paragraph on the " + document.title + " page";
     }
-    
+
     /**
      * This function provides JavaScript code for the Home page
      * 
@@ -59,11 +59,18 @@
     function Home() {
         InitialText();
         
-        var firstPargraph = document.querySelectorAll("div.row p")[0];
+        var parentElement = document.querySelector("div.row");
         
-       firstPargraph.style.color = "red";
+        var firstParagraph = document.querySelector("div.row p");
+        
+        var secondParagraph = document.createElement("p");
+        secondParagraph.textContent = "second paragraph";
+        
+        parentElement.insertBefore(secondParagraph, firstParagraph);
+         
+        
     }
-    
+
      /**
      * This function provides JavaScript code for the About page
      * 
